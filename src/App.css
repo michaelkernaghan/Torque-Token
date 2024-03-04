@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+  background: linear-gradient(to right, #000000, #434343); /* Adding a gradient background */
+}
+
+.App-header {
+  background-color: #d32f2f; /* A bold red for the header to add excitement */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Token-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Featured-image {
+  width: 30%; 
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #d32f2f; /* Red border around the featured image */
+}
+
+.TokenDetailsList {
+  list-style: none;
+  padding: 0;
+}
+
+.TokenDetailsList li {
+  margin: 10px 0;
+}
+
+.ConnectButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff; /* White text for better contrast */
+  background-color: #d32f2f; /* Red button color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ConnectButton:hover {
+  background-color: #a22828; /* Darker shade of red on hover */
+}
+
+.App-title {
+  color: #ffffff;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px #000000; /* Black shadow for depth */
+}.App-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1b1b1b; /* Dark footer for contrast */
+  color: white;
+  text-align: center;
+  padding: 20px 10px; /* Adjusted padding for better spacing */
+  border-top: 3px solid #d32f2f; /* Add a red top border for a distinct look */
+}
+
+.Footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between links */
+}
+
+.App-footer a {
+  background-color: #d32f2f;
+  color: white; /* Ensure text color is white at all times */
+  padding: 10px 20px; /* More padding for better touch targets */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.App-footer a:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  background-color: #a22828; /* Darker shade of red on hover */
+}
+
+.App-footer a:active {
+  background-color: #000000; /* Black for active state */
+}
+
+.App-footer a:visited {
+  color: white; /* Ensure visited links also show text clearly */
+}
+
+
+a {
+  background-color: #d32f2f;
+  color: white;
+  padding: .25em .5em;
+  text-decoration: none;
+  border-radius: 2px; /* Rounded corners for links */
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: #a22828; /* Darker shade of red on hover */
+}
+
+a:active {
+  background-color: #000000; /* Black for active state */
+}
+
+a:visited {
+  background-color: #ccc;
+}
