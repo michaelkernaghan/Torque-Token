@@ -107,11 +107,12 @@ function App() {
           <div className="Token-info">
             <br />
             <img src="TQ-logo.png" className="Featured-image" alt="Measuring the Revolutions" />
+            
             <TokenDetailsList>
               <li>Total TORQUE Supply: {tokenDetails && tokenDetails.totalSupply}</li>
               <li>Your TORQUE Balance: {boopsBalance}</li>
             </TokenDetailsList>
-            To disconnect, stop the Active Connection in Metamask
+            Refresh to sync your balance
           </div>
         )}
       </header>
