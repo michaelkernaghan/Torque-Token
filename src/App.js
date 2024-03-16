@@ -25,7 +25,19 @@ const TokenDetailsList = styled.ul`
   text-align: left;
 `
 
+const ContractLink = styled.a`
+  color: #FFD580; /* Adjust the color as needed */
+  &:hover {
+    color: #FFC300;
+  }
+  margin-top: 20px; /* Adds space between the list and the link */
+  display: block; /* Ensures the link is on a new line */
+`
+
 function App() {
+  const contractAddress = "0xD4d26c5e437173796B3ff41Fc5a75Ab96eB604eA";
+  const etherlinkscanUrl = `https://testnet-explorer.etherlink.com/token/${contractAddress}`;
+
   const [tokenDetails, setTokenDetails] = useState(null);
   const [contract, setContract] = useState(null);
   const [wallet, setWallet] = useState({ accounts: [] });
@@ -35,7 +47,7 @@ function App() {
     if (typeof window.ethereum !== 'undefined') {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
-      const contract = new ethers.Contract("0xCB2aB1E44daDC889a91184527beC6820Bc2BF210", BOOPSToken.abi, signer);
+      const contract = new ethers.Contract(contractAddress, BOOPSToken.abi, signer);
       setContract(contract);
 
       const symbol = await contract.symbol();
@@ -45,8 +57,7 @@ function App() {
     } else {
       console.error('Please install MetaMask!');
     }
-  }, []); // The empty array ensures that the function is only created once
-
+  }, [contractAddress]); // Add contractAddress as a dependency
 
   const fetchBoopsBalance = useCallback(async (account) => {
     try {
@@ -83,9 +94,7 @@ function App() {
     getProvider();
 
     return () => {
-      window.ethereum?.removeListener('accountsChanged', (accounts) => {
-        setWallet({ accounts: [] });
-      });
+      window.ethereum?.removeListener('accountsChanged');
     };
   }, [connectContract, fetchBoopsBalance]);
 
@@ -107,11 +116,13 @@ function App() {
           <div className="Token-info">
             <br />
             <img src="TQ-logo.png" className="Featured-image" alt="Measuring the Revolutions" />
-            
             <TokenDetailsList>
               <li>Total TORQUE Supply: {tokenDetails && tokenDetails.totalSupply}</li>
               <li>Your TORQUE Balance: {boopsBalance}</li>
             </TokenDetailsList>
+            <ContractLink href={etherlinkscanUrl} target="_blank" rel="noopener noreferrer">
+              View Contract on Etherlinkscan
+            </ContractLink>
             Refresh to sync your balance
           </div>
         )}
@@ -123,13 +134,8 @@ function App() {
           <a href="https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/michaelkernaghan/ERC-20-Token-Lists/main/tokenlist.json" target="_blank" rel="noopener noreferrer">Use the HAPPY Token List</a>
         </div>
       </footer>
-
     </div>
   );
-
 };
 
 export default App;
-
-
-
