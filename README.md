@@ -1,26 +1,25 @@
 # Torque Token
 
-Welcome to the Torque Token repository, a project dedicated to the innovative Torque Token on the Ethereum blockchain. The Torque Token is designed to revolutionize how transactions and contracts are executed within the blockchain space, providing users with enhanced efficiency, security, and flexibility.
+Welcome to the Torque Token repository, a pioneering project on the Etherklink blockchain, a smart rollup on Tezos. The Torque Token is engineered to revolutionize transactions and smart contract interactions within the Tezos ecosystem, offering users enhanced efficiency, security, and flexibility.
 
 ## Project Overview
 
-The Torque Token aims to offer a unique approach to smart contract utilization, focusing on user-centric features and sustainability. By leveraging the Ethereum blockchain, Torque Token introduces mechanisms for reduced gas fees, improved transaction speeds, and a robust tokenomics model that benefits all stakeholders.
+The Torque Token leverages the unique features of the Etherklink blockchain to offer a distinct approach to smart contract execution, prioritizing user-centric functionalities and sustainable practices. By building on Etherklink, the Torque Token initiative aims to minimize transaction costs, accelerate processing times, and introduce a robust tokenomics model beneficial for all ecosystem participants.
 
 ## Features
 
-- **Efficient Transactions**: Leveraging Layer 2 solutions to ensure faster and more cost-effective transactions.
-- **Enhanced Security**: Implementing the latest security protocols to safeguard user assets and data.
-- **Decentralized Finance (DeFi) Integration**: Easy integration with existing DeFi platforms for lending, borrowing, and yield farming.
-- **Community Governance**: Torque Token holders can vote on key project decisions, ensuring a decentralized governance structure.
-- **Eco-friendly Initiatives**: Commitment to sustainability through energy-efficient transaction processing and support for eco-friendly projects.
+- **Efficient Transactions**: Utilizing Etherklink's smart rollups for faster and more cost-effective transactions on the Tezos blockchain.
+- **Enhanced Security**: Adopting cutting-edge security measures to protect user assets and data within the Tezos ecosystem.
+- **Decentralized Finance (DeFi) Integration**: Seamless integration with DeFi platforms on Tezos for lending, borrowing, and yield farming.
+- **Community Governance**: Empowering Torque Token holders with voting rights on pivotal project decisions, fostering a truly decentralized governance structure.
+- **Eco-friendly Initiatives**: A commitment to sustainability, leveraging the energy-efficient nature of the Tezos blockchain and supporting green projects.
 
 ## Technology Stack
 
-- **Solidity**: For smart contract development on the Ethereum blockchain.
-- **Hardhat**: Ethereum development environment for advanced smart contract testing and deployment.
-- **Ethers.js**: A library for interacting with the Ethereum blockchain and its ecosystem.
-- **React**: For building a user-friendly frontend interface.
-- **Web3.js**: To connect the frontend application with Ethereum networks.
+- **SmartPy**: For smart contract development on the Tezos blockchain.
+- **Taquito**: A TypeScript library suite for development on the Tezos blockchain, facilitating dApp and smart contract interactions.
+- **React**: For crafting a user-friendly frontend interface.
+- **TezBridge**: To connect the frontend application with Tezos wallets and networks.
 
 ## Getting Started
 
@@ -45,21 +44,11 @@ Ensure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) ins
     npm install
     ```
 
-3. **Compile Smart Contracts**
+3. **Compile and Deploy Smart Contracts**
 
-    ```bash
-    npx hardhat compile
-    ```
+    Use SmartPy to compile your smart contracts and deploy them on the Tezos testnet or mainnet, depending on your development stage.
 
-4. **Deploy Smart Contracts**
-
-    Update `hardhat.config.js` with your network details and run:
-
-    ```bash
-    npx hardhat run scripts/deploy.js --network yourNetworkName
-    ```
-
-5. **Start the Frontend Application**
+4. **Start the Frontend Application**
 
     ```bash
     cd frontend
@@ -70,17 +59,15 @@ Ensure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) ins
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
+Contributions are highly appreciated and are what make the open-source community such an amazing place to learn, inspire, and create. We welcome contributions of all kinds, from bug fixes to feature additions. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for contribution guidelines.
 
 ## License
 
-Distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- Ethereum Community for their continuous support and resources.
-- All contributors and users who are part of the Torque Token journey.
+- Thanks to the Tezos and Etherklink communities for their innovative tools and continuous support.
+- Appreciation to all contributors and participants in the Torque Token project.
 
-Stay tuned for updates, and feel free to reach out for collaborations or questions. Join us in shaping the future of blockchain with Torque Token.
-
-For more information, visit our [official website](https://torquetoken.io) or explore the [GitHub repository](https://github.com/michaelkernaghan/Torque-Token).
+For more information and updates, please visit our [official website](https://torquetoken.io) or explore the [GitHub repository](https://github.com/michaelkernaghan/Torque-Token).
