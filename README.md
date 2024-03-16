@@ -1,76 +1,73 @@
-# Getting Started with Create React App
+# Torque Token
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Torque Token repository, a pioneering project on the Etherklink blockchain, a smart rollup on Tezos. The Torque Token is engineered to revolutionize transactions and smart contract interactions within the Tezos ecosystem, offering users enhanced efficiency, security, and flexibility.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The Torque Token leverages the unique features of the Etherklink blockchain to offer a distinct approach to smart contract execution, prioritizing user-centric functionalities and sustainable practices. By building on Etherklink, the Torque Token initiative aims to minimize transaction costs, accelerate processing times, and introduce a robust tokenomics model beneficial for all ecosystem participants.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Efficient Transactions**: Utilizing Etherklink's smart rollups for faster and more cost-effective transactions on the Tezos blockchain.
+- **Enhanced Security**: Adopting cutting-edge security measures to protect user assets and data within the Tezos ecosystem.
+- **Decentralized Finance (DeFi) Integration**: Seamless integration with DeFi platforms on Tezos for lending, borrowing, and yield farming.
+- **Community Governance**: Empowering Torque Token holders with voting rights on pivotal project decisions, fostering a truly decentralized governance structure.
+- **Eco-friendly Initiatives**: A commitment to sustainability, leveraging the energy-efficient nature of the Tezos blockchain and supporting green projects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **SmartPy**: For smart contract development on the Tezos blockchain.
+- **Taquito**: A TypeScript library suite for development on the Tezos blockchain, facilitating dApp and smart contract interactions.
+- **React**: For crafting a user-friendly frontend interface.
+- **TezBridge**: To connect the frontend application with Tezos wallets and networks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) installed on your system.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**
 
-### `npm run eject`
+    ```bash
+    git clone https://github.com/michaelkernaghan/Torque-Token.git
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Dependencies**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Navigate to the project directory and install the necessary dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd Torque-Token
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Compile and Deploy Smart Contracts**
 
-## Learn More
+    Use SmartPy to compile your smart contracts and deploy them on the Tezos testnet or mainnet, depending on your development stage.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Start the Frontend Application**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd frontend
+    npm start
+    ```
 
-### Code Splitting
+    Access the frontend application at [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are highly appreciated and are what make the open-source community such an amazing place to learn, inspire, and create. We welcome contributions of all kinds, from bug fixes to feature additions. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for contribution guidelines.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- Thanks to the Tezos and Etherklink communities for their innovative tools and continuous support.
+- Appreciation to all contributors and participants in the Torque Token project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-### Acknowledgement
-Created using
-OpenAI. (2023). ChatGPT [Large language model]. https://chat.openai.com
+For more information and updates, please visit our [official website](https://torquetoken.io) or explore the [GitHub repository](https://github.com/michaelkernaghan/Torque-Token).
