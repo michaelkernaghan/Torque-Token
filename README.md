@@ -1,76 +1,86 @@
-# Getting Started with Create React App
+# Torque Token
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Torque Token repository, a project dedicated to the innovative Torque Token on the Ethereum blockchain. The Torque Token is designed to revolutionize how transactions and contracts are executed within the blockchain space, providing users with enhanced efficiency, security, and flexibility.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The Torque Token aims to offer a unique approach to smart contract utilization, focusing on user-centric features and sustainability. By leveraging the Ethereum blockchain, Torque Token introduces mechanisms for reduced gas fees, improved transaction speeds, and a robust tokenomics model that benefits all stakeholders.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Efficient Transactions**: Leveraging Layer 2 solutions to ensure faster and more cost-effective transactions.
+- **Enhanced Security**: Implementing the latest security protocols to safeguard user assets and data.
+- **Decentralized Finance (DeFi) Integration**: Easy integration with existing DeFi platforms for lending, borrowing, and yield farming.
+- **Community Governance**: Torque Token holders can vote on key project decisions, ensuring a decentralized governance structure.
+- **Eco-friendly Initiatives**: Commitment to sustainability through energy-efficient transaction processing and support for eco-friendly projects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+- **Solidity**: For smart contract development on the Ethereum blockchain.
+- **Hardhat**: Ethereum development environment for advanced smart contract testing and deployment.
+- **Ethers.js**: A library for interacting with the Ethereum blockchain and its ecosystem.
+- **React**: For building a user-friendly frontend interface.
+- **Web3.js**: To connect the frontend application with Ethereum networks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensure you have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) installed on your system.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**
 
-### `npm run eject`
+    ```bash
+    git clone https://github.com/michaelkernaghan/Torque-Token.git
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Dependencies**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Navigate to the project directory and install the necessary dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd Torque-Token
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Compile Smart Contracts**
 
-## Learn More
+    ```bash
+    npx hardhat compile
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Deploy Smart Contracts**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Update `hardhat.config.js` with your network details and run:
 
-### Code Splitting
+    ```bash
+    npx hardhat run scripts/deploy.js --network yourNetworkName
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Start the Frontend Application**
 
-### Analyzing the Bundle Size
+    ```bash
+    cd frontend
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Access the frontend application at [http://localhost:3000](http://localhost:3000).
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Ethereum Community for their continuous support and resources.
+- All contributors and users who are part of the Torque Token journey.
 
-### `npm run build` fails to minify
+Stay tuned for updates, and feel free to reach out for collaborations or questions. Join us in shaping the future of blockchain with Torque Token.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-### Acknowledgement
-Created using
-OpenAI. (2023). ChatGPT [Large language model]. https://chat.openai.com
+For more information, visit our [official website](https://torquetoken.io) or explore the [GitHub repository](https://github.com/michaelkernaghan/Torque-Token).
