@@ -14,13 +14,6 @@ The Torque Token leverages the unique features of the Etherklink blockchain to o
 - **Community Governance**: Empowering Torque Token holders with voting rights on pivotal project decisions, fostering a truly decentralized governance structure.
 - **Eco-friendly Initiatives**: A commitment to sustainability, leveraging the energy-efficient nature of the Tezos blockchain and supporting green projects.
 
-## Technology Stack
-
-- **SmartPy**: For smart contract development on the Tezos blockchain.
-- **Taquito**: A TypeScript library suite for development on the Tezos blockchain, facilitating dApp and smart contract interactions.
-- **React**: For crafting a user-friendly frontend interface.
-- **TezBridge**: To connect the frontend application with Tezos wallets and networks.
-
 ## Getting Started
 
 ### Prerequisites
