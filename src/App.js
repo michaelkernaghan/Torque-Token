@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import detectEthereumProvider from '@metamask/detect-provider';
 import BOOPSToken from './abi/BOOPSToken.json';
-import './App.css'; // Import your CSS file here
+import './App.css';
 
 const ethers = require("ethers");
 
@@ -26,16 +26,18 @@ const TokenDetailsList = styled.ul`
 `
 
 const ContractLink = styled.a`
-  color: #FFD580; /* Adjust the color as needed */
+  color: #F8F8FF; /* Ghost white for a softer appearance against the red */
   &:hover {
-    color: #FFC300;
+    color: #F5F5DC; /* Beige for the hover state to add subtle contrast */
   }
-  margin-top: 20px; /* Adds space between the list and the link */
-  display: block; /* Ensures the link is on a new line */
+  margin-top: 20px;
+  display: block;
+  text-decoration: none; /* Optional: Removes underline to clean up the appearance */
+  font-weight: bold; /* Optional: Makes the link slightly more prominent */
 `
 
 function App() {
-  const contractAddress = "0xD4d26c5e437173796B3ff41Fc5a75Ab96eB604eA";
+  const contractAddress = "0x5B9Be1F1278B3590eb784A163372C96b6cd9DeFf";
   const etherlinkscanUrl = `https://testnet-explorer.etherlink.com/token/${contractAddress}`;
 
   const [tokenDetails, setTokenDetails] = useState(null);
@@ -57,52 +59,63 @@ function App() {
     } else {
       console.error('Please install MetaMask!');
     }
-  }, [contractAddress]); // Add contractAddress as a dependency
+  }, [contractAddress]);
 
   const fetchBoopsBalance = useCallback(async (account) => {
-    try {
-      const balance = await contract.balanceOf(account);
-      const formattedBalance = ethers.utils.formatUnits(balance, 'ether');
-      setBoopsBalance(formattedBalance);
-    } catch (error) {
-      console.error("Error fetching balance:", error);
-      setBoopsBalance('0');
+    if(contract) {
+      try {
+        const balance = await contract.balanceOf(account);
+        const formattedBalance = ethers.utils.formatUnits(balance, 'ether');
+        setBoopsBalance(formattedBalance);
+      } catch (error) {
+        console.error("Error fetching balance:", error);
+        setBoopsBalance('0');
+      }
     }
   }, [contract]);
 
   useEffect(() => {
     const getProvider = async () => {
-      const provider = await detectEthereumProvider({ silent: true });
+      const provider = await detectEthereumProvider();
       if (provider) {
-        const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+        const accounts = await provider.request({ method: 'eth_accounts' });
         if (accounts.length > 0) {
           setWallet({ accounts });
-          connectContract();
-          fetchBoopsBalance(accounts[0]);
+          connectContract().then(() => fetchBoopsBalance(accounts[0]));
         }
-        window.ethereum.on('accountsChanged', (accounts) => {
+
+        // Define a callback function for the 'accountsChanged' event
+        const handleAccountsChanged = (accounts) => {
           if (accounts.length > 0) {
             setWallet({ accounts });
             fetchBoopsBalance(accounts[0]);
           } else {
             setWallet({ accounts: [] });
+            setBoopsBalance('0');
           }
-        });
+        };
+
+        // Add the event listener
+        provider.on('accountsChanged', handleAccountsChanged);
+
+        // Remove the event listener on cleanup
+        return () => {
+          provider.removeListener('accountsChanged', handleAccountsChanged);
+        };
       }
     };
 
     getProvider();
-
-    return () => {
-      window.ethereum?.removeListener('accountsChanged');
-    };
   }, [connectContract, fetchBoopsBalance]);
 
   const handleConnect = async () => {
-    let accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    setWallet({ accounts });
+    if(window.ethereum) {
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      setWallet({ accounts });
+      fetchBoopsBalance(accounts[0]);
+    }
   };
 
   return (
@@ -127,7 +140,6 @@ function App() {
           </div>
         )}
       </header>
-      <br></br>
       <footer className="App-footer">
         <div className="Footer-content">
           <a href="https://test.app.tachyswap.org/#/" target="_blank" rel="noopener noreferrer">Swap and Pool TORQUE</a>
