@@ -143,7 +143,6 @@ function App() {
       <footer className="App-footer">
         <div className="Footer-content">
           <a href="https://test.app.tachyswap.org/#/" target="_blank" rel="noopener noreferrer">Swap and Pool TORQUE</a>
-          <a href="https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/michaelkernaghan/ERC-20-Token-Lists/main/tokenlist.json" target="_blank" rel="noopener noreferrer">Use the HAPPY Token List</a>
         </div>
       </footer>
     </div>
